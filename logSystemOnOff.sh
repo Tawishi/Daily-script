@@ -1,0 +1,1 @@
+echo -e "$(whoami && date)" >> /mnt/c/Users/Dell/Desktop/2019-2023/time_tracker/Morning-Routine-Automation/systemOnOff.txt
