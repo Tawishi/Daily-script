@@ -124,6 +124,14 @@
                     "minutes": 0,
                     "seconds": 1,
                     "start_time": "2022-01-20 00:53:29"
+                },
+                {
+                    "days": 0,
+                    "end_time": "2022-01-20 01:42:07",
+                    "hours": 0,
+                    "minutes": 0,
+                    "seconds": 3,
+                    "start_time": "2022-01-20 01:42:04"
                 }
             ]
         },
@@ -633,6 +641,14 @@
                     "minutes": 0,
                     "seconds": 1,
                     "start_time": "2022-01-20 00:53:44"
+                },
+                {
+                    "days": 0,
+                    "end_time": "2022-01-20 01:42:09",
+                    "hours": 0,
+                    "minutes": 0,
+                    "seconds": 2,
+                    "start_time": "2022-01-20 01:42:07"
                 }
             ]
         },
@@ -841,6 +857,19 @@
                     "minutes": 1,
                     "seconds": 36,
                     "start_time": "2022-01-20 01:07:08"
+                }
+            ]
+        },
+        {
+            "name": "tawishi@pop-os: ~/Daily-script",
+            "time_entries": [
+                {
+                    "days": 0,
+                    "end_time": "2022-01-20 01:42:04",
+                    "hours": 0,
+                    "minutes": 0,
+                    "seconds": 4,
+                    "start_time": "2022-01-20 01:42:00"
                 }
             ]
         }
