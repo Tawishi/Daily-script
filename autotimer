@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python3 ~/Daily-script/autotimer.py

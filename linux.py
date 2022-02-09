@@ -5,6 +5,7 @@ import sys
 import os
 import subprocess
 import re
+import datetime
 
 
 def get_active_window_raw():
@@ -41,23 +42,25 @@ this file alone can be run without importing other files
 uncomment the below lines for linux - works - but activities won't be dumped in json file
 (may be it works for other OS also, not sure)
 '''
-# def run():
-#     new_window = None
-#     current_window = get_active_window_title()
-#     while(True):
-#         if new_window != current_window:
-#                 print(current_window)
-#                 print(type(current_window))
-#                 current_window = new_window
-#         new_window = get_active_window_title()
+def run():
+     new_window = None
+     current_window = get_active_window_raw()
+     while(True):
+         if new_window != current_window:
+                 print(current_window)
+                 #print(type(current_window))
+                 current_window = new_window
+         new_window = get_active_window_raw()
 
 
-# run()
+run()
+
 def get_chrome_url_x():
         ''' 
         instead of url the name of the website and the title of the page is returned seperated by '/' 
         '''
         detail_full = get_active_window_raw()
+        #print(detail_full)
         detail_list = detail_full.split(' - ')
         detail_list.pop()
         detail_list = detail_list[::-1]
@@ -66,7 +69,9 @@ def get_chrome_url_x():
 
 def get_active_window_x():
     full_detail = get_active_window_raw()
-    detail_list = None if None else full_detail.decode().split(" - ")
+    #print(full_detail)
+    print(datetime.now())
+    detail_list = None if None else full_detail.decode().split(' - ')
     new_window_name = detail_list[-1]
     return new_window_name
 
