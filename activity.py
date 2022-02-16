@@ -9,7 +9,7 @@ class AcitivyList:
     
     def initialize_me(self):
         activity_list = AcitivyList([])
-        with open('activities_' + str(datetime.date.today()) + '.json', 'r') as f:
+        with open('activities_' + str(datetime.date.today()) + '.json', 'r+') as f:
             data = json.load(f)
             activity_list = AcitivyList(
                 activities = self.get_activities_from_json(data)

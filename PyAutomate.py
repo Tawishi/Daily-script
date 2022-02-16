@@ -44,6 +44,7 @@ continueDay()
 printMessage("test 4")
 webbrowser.open(os.getenv("TEST4",alt))
 continueDay()
+printMessage("test 5")
 webbrowser.open(os.getenv("TEST5",alt))
 continueDay()
 
