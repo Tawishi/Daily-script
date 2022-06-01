@@ -14,7 +14,7 @@ if not flag:
 Utility functions
 '''
 def continueDay():
-    cont = input("Press ENTER too continue")
+    cont = input("Press ENTER to continue")
 
 def printMessage(message=""):
     print(message)
@@ -27,6 +27,10 @@ os.system("bash logSystemOnOff.sh")
 
 # notion
 printMessage("Check your calendar")
+# mail
+printMessage("Check mail")
+webbrowser.open(os.getenv("MAIL",alt))
+continueDay()
 printMessage("Update Daily Tasks")
 webbrowser.open_new_tab(os.getenv("NOTION",alt))
 continueDay()
@@ -41,12 +45,6 @@ continueDay()
 printMessage("test 3")
 webbrowser.open(os.getenv("TEST3",alt))
 continueDay()
-printMessage("test 4")
-webbrowser.open(os.getenv("TEST4",alt))
-continueDay()
-printMessage("test 5")
-webbrowser.open(os.getenv("TEST5",alt))
-continueDay()
 
 # cal & update daily type progess
 printMessage("WPM daily update")
@@ -59,22 +57,18 @@ printMessage("Anki time!")
 webbrowser.open(os.getenv("ANKI",alt))
 continueDay()
 
-# mail
-printMessage("Check mail")
-webbrowser.open(os.getenv("MAIL",alt))
-continueDay()
-
-# whatsapp
-printMessage("Check whatsapp")
-# sendNotificationOnWindows("Open Whatsapp")
-webbrowser.open(os.getenv("WHATSAPP",alt))
-continueDay()
-
 # leetcode
-printMessage("DSA Practice")
+printMessage("LC Daily - 1")
+webbrowser.open(os.getenv("LC_DAILY",alt))
+continueDay()
+printMessage("DSA - 3")
+webbrowser.open(os.getenv("LEETCODE",alt))
+continueDay()
+printMessage("List - 1")
 webbrowser.open(os.getenv("LEETCODE",alt))
 continueDay()
 
-printMessage("Let's take a break!")
+
+printMessage("Let's begin the day, Tawishi :) !")
 
 
