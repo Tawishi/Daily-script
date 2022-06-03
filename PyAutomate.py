@@ -25,12 +25,12 @@ Start here
 '''
 os.system("bash logSystemOnOff.sh")
 
-# notion
-printMessage("Check your calendar")
 # mail
 printMessage("Check mail")
 webbrowser.open(os.getenv("MAIL",alt))
 continueDay()
+# notion
+printMessage("Check your calendar")
 printMessage("Update Daily Tasks")
 webbrowser.open_new_tab(os.getenv("NOTION",alt))
 continueDay()
@@ -65,7 +65,7 @@ printMessage("DSA - 3")
 webbrowser.open(os.getenv("LEETCODE",alt))
 continueDay()
 printMessage("List - 1")
-webbrowser.open(os.getenv("LEETCODE",alt))
+webbrowser.open(os.getenv("AZ",alt))
 continueDay()
 
 
