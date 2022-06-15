@@ -61,10 +61,11 @@ def get_chrome_url_x():
         '''
         detail_full = get_active_window_raw()
         #print(detail_full)
-        detail_list = detail_full.split(' - ')
+        #detail_list = detail_full.split(bytes(' - ',encoding='utf-8'))
+        detail_list = detail_full.split(b" - ")
         detail_list.pop()
         detail_list = detail_list[::-1]
-        _active_window_name = 'Google Chrome -> ' + " / ".join(detail_list)
+        _active_window_name = 'Google Chrome -> ' + " / ".join(str(detail_list))
         return _active_window_name
 
 def get_active_window_x():

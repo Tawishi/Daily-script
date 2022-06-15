@@ -31,6 +31,7 @@ webbrowser.open(os.getenv("MAIL",alt))
 continueDay()
 # notion
 printMessage("Check your calendar")
+webbrowser.open(os.getenv("CAL",alt))
 printMessage("Update Daily Tasks")
 webbrowser.open_new_tab(os.getenv("NOTION",alt))
 continueDay()
