@@ -29,9 +29,10 @@ os.system("bash logSystemOnOff.sh")
 printMessage("Check mail")
 webbrowser.open(os.getenv("MAIL",alt))
 continueDay()
-# notion
+# calender
 printMessage("Check your calendar")
 webbrowser.open(os.getenv("CAL",alt))
+# notion
 printMessage("Update Daily Tasks")
 webbrowser.open_new_tab(os.getenv("NOTION",alt))
 continueDay()
@@ -47,7 +48,7 @@ printMessage("test 3")
 webbrowser.open(os.getenv("TEST3",alt))
 continueDay()
 
-# cal & update daily type progess
+# update daily type progess
 printMessage("WPM daily update")
 # subprocess.Popen('C:\\Windows\\System32\\calc.exe')
 webbrowser.open(os.getenv("T_WORKSHEET",alt))
@@ -58,17 +59,23 @@ printMessage("Anki time!")
 webbrowser.open(os.getenv("ANKI",alt))
 continueDay()
 
-# leetcode
-printMessage("LC Daily - 1")
-webbrowser.open(os.getenv("LC_DAILY",alt))
+# Striver & Grind 75 & CSES
+printMessage("Striver Sheet")
+webbrowser.open(os.getenv("SS",alt))
 continueDay()
-printMessage("DSA - 3")
-webbrowser.open(os.getenv("LEETCODE",alt))
-continueDay()
-printMessage("List - 1")
-webbrowser.open(os.getenv("AZ",alt))
+printMessage("Grind")
+webbrowser.open(os.getenv("GRIND_75",alt))
 continueDay()
 
+# leetcode
+printMessage("Freq q.'s")
+webbrowser.open(os.getenv("G",alt))
+continueDay()
+
+# CP
+printMessage("CSES")
+webbrowser.open(os.getenv("CSES",alt))
+continueDay()
 
 printMessage("Let's begin the day, Tawishi :) !")
 
