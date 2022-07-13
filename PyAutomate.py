@@ -54,6 +54,11 @@ printMessage("WPM daily update")
 webbrowser.open(os.getenv("T_WORKSHEET",alt))
 continueDay()
 
+#JS stream
+printMessage("Hi Mika!")
+webbrowser.open(os.getenv("JS",alt))
+continueDay()
+
 # anki
 printMessage("Anki time!")
 webbrowser.open(os.getenv("ANKI",alt))
