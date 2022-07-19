@@ -19,6 +19,7 @@ activity_name = ""
 start_time = datetime.datetime.now()
 activeList = AcitivyList([])
 first_time = True
+DIR = '/home/tawishi/Desktop/t./Daily-script/data/activities_'
 
 
 def url_to_name(url):
@@ -95,7 +96,7 @@ try:
                 if not exists:
                     activity = Activity(activity_name, [time_entry])
                     activeList.activities.append(activity)
-                with open('activities_' + str(datetime.date.today()) + '.json', 'w') as json_file:
+                with open(DIR + str(datetime.date.today()) + '.json', 'w') as json_file:
                     json.dump(activeList.serialize(), json_file,
                               indent=4, sort_keys=True)
                     start_time = datetime.datetime.now()
@@ -105,5 +106,5 @@ try:
         time.sleep(1)
     
 except KeyboardInterrupt:
-    with open('activities_' + str(datetime.date.today()) + '.json', 'w') as json_file:
+    with open(DIR + str(datetime.date.today()) + '.json', 'w') as json_file:
         json.dump(activeList.serialize(), json_file, indent=4, sort_keys=True)
