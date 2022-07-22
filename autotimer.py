@@ -75,6 +75,7 @@ try:
                 new_window_name = url_to_name(get_chrome_url())
         if sys.platform in ['linux', 'linux2']:
             new_window_name = l.get_active_window_x()
+            #print(new_window_name, type(new_window_name))
             if 'Google Chrome' in new_window_name:
                 new_window_name = l.get_chrome_url_x()
 

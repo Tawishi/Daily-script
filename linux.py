@@ -47,7 +47,7 @@ def run():
      current_window = get_active_window_raw()
      while(True):
          if new_window != current_window:
-                 print(current_window)
+                 #print(current_window)
                  #print(type(current_window))
                  current_window = new_window
          new_window = get_active_window_raw()
@@ -71,12 +71,12 @@ def get_chrome_url_x():
 def get_active_window_x():
     full_detail = get_active_window_raw()
     #print(full_detail)
-    #print(datetime.datetime().now())
+    #print(type(full_detail))
     if full_detail is None:
     	detail_list = None
     else:
     	detail_list = full_detail.decode().split(' - ')
-    #detail_list = None if None else full_detail.split(' - ')
+    detail_list = None if None else full_detail.decode().split(' - ')
     new_window_name = detail_list[-1]
     return new_window_name
 
