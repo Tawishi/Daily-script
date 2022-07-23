@@ -76,7 +76,16 @@ def get_active_window_x():
     	detail_list = None
     else:
     	detail_list = full_detail.decode().split(' - ')
-    detail_list = None if None else full_detail.decode().split(' - ')
-    new_window_name = detail_list[-1]
+    print(full_detail, type(full_detail))
+    #detail_list = None if None else full_detail.decode().split(' - ')
+    if full_detail is None:
+    	detail_list = None
+    	return None
+    else:
+    	detail_list = full_detail.decode().split(' - ')
+    	new_window_name = detail_list[-1]
+    print(detail_list,type(detail_list))
+    # error handling for xprop: error
+    #new_window_name = detail_list[-1]
     return new_window_name
 
