@@ -5,14 +5,26 @@ import pandas as pd
 from datetime import datetime
 import sys
 
- 
-def updateTypingPerformance(df,datedPerformance):
+def updateTypingPerformance(df, datedPerformance):
+	
     if "Unnamed: 0" in df.columns:
         df.drop("Unnamed: 0", axis=1, inplace=True)
+
+    df.loc[len(df)] = datedPerformance
+    #df = df.append(pd.Series(datedPerformance, index=df.columns), ignore_index=True)
+    print("After:",df)
+    return df
+    
+"""
+def updateTypingPerformance(df,datedPerformance):
+	if "Unnamed: 0" in df.columns:
+    	df.drop("Unnamed: 0", axis=1, inplace=True)
+	
     df.loc[len(df)] = datedPerformance
     return df
+"""
 
-
+"""
 def typePractice(typingDataset):
     files = list(typingDataset.iterdir())
     file = random.choice(files)
@@ -24,13 +36,25 @@ def typePractice(typingDataset):
         numberOfLines=10
 
     os.system(f"mlt file  --n-lines {numberOfLines} {file}")
-
+"""
 
 typingDatasetFolder = "//home/tawishi/Desktop/t./self_track/data/typingDataset"
 typingDataset = pathlib.Path(typingDatasetFolder)
 typingPerformance = "/home/tawishi/Desktop/t./self_track/data/typingPerformance.csv"
-df = pd.read_csv(typingPerformance)
-typePractice(typingDataset)
+
+import pandas as pd
+
+
+try:
+    # Pandas code that may raise the EmptyDataError
+    df = pd.read_csv(typingPerformance)
+except pd.errors.EmptyDataError:
+    # Handle the EmptyDataError exception
+    df = pd.DataFrame(columns=["Date","WPM","Accuracy"])
+    print("No columns to parse from file. Please check the file or provide a valid file.")
+    
+
+#typePractice(typingDataset) # do the online type tests instead
 
 performance = []
 
@@ -44,9 +68,10 @@ performance.append(wpm)
 performance.append(acc)
 
 updateTypingPerformance(df,performance)
+
 while cont=="y":
     performance = []
-    typePractice(typingDataset)
+    #typePractice(typingDataset)
     date = str(datetime.now())
     wpm = input("What was the wpm?")
 
