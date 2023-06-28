@@ -28,7 +28,6 @@ def get_active_window_raw():
     match = re.match(b"WM_NAME\(\w+\) = (?P<name>.+)$", stdout)
     if match != None:
         ret = match.group("name").strip(b'"')
-        #print(type(ret))
         '''
         ret is str for python2
         ret is bytes for python3 (- gives error while calling in other file)
@@ -47,8 +46,6 @@ def run():
      current_window = get_active_window_raw()
      while(True):
          if new_window != current_window:
-                 #print(current_window)
-                 #print(type(current_window))
                  current_window = new_window
          new_window = get_active_window_raw()
 
@@ -60,8 +57,6 @@ def get_chrome_url_x():
         instead of url the name of the website and the title of the page is returned seperated by '/' 
         '''
         detail_full = get_active_window_raw()
-        #print(detail_full)
-        #detail_list = detail_full.split(bytes(' - ',encoding='utf-8'))
         detail_list = detail_full.split(b" - ")
         detail_list.pop()
         detail_list = detail_list[::-1]
@@ -70,22 +65,17 @@ def get_chrome_url_x():
 
 def get_active_window_x():
     full_detail = get_active_window_raw()
-    #print(full_detail)
-    #print(type(full_detail))
     if full_detail is None:
     	detail_list = None
     else:
     	detail_list = full_detail.decode().split(' - ')
-    print(full_detail, type(full_detail))
-    #detail_list = None if None else full_detail.decode().split(' - ')
+
     if full_detail is None:
     	detail_list = None
     	return None
     else:
     	detail_list = full_detail.decode().split(' - ')
     	new_window_name = detail_list[-1]
-    print(detail_list,type(detail_list))
     # error handling for xprop: error
-    #new_window_name = detail_list[-1]
     return new_window_name
 
