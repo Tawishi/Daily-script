@@ -4,7 +4,7 @@ from multiprocessing import Pool
                                                                                 
 processes = ('logWin.py',
              'logKeys.py',
-             'startday.py')                                    
+             'PyAutomate.py')                                    
                                                                    
 def run_process(process):                                                             
     os.system('python {}'.format(process))                                       

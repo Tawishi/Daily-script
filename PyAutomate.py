@@ -4,6 +4,7 @@ import os
 from datetime import datetime
 from dotenv import load_dotenv
 
+# loading the .env file for shhh... the Secrets
 flag = load_dotenv()
 
 alt = ""
@@ -23,7 +24,9 @@ def printMessage(message=""):
 '''
 Start here
 '''
-#os.system("bash logSystemOnOff.sh")
+os.system("bash logSystemOnOff.sh")
+
+printMessage("Let's begin the day, Tawishi :) !")
 
 # notion
 printMessage("Update Daily Tasks")
@@ -44,12 +47,6 @@ printMessage("test 3")
 webbrowser.open(os.getenv("TEST3",alt))
 continueDay()
 
-# update daily type progess
-printMessage("WPM daily update")
-# subprocess.Popen('C:\\Windows\\System32\\calc.exe')
-webbrowser.open(os.getenv("T_WORKSHEET",alt))
-continueDay()
-
 # mail
 printMessage("Check mail")
 webbrowser.open(os.getenv("MAIL",alt))
@@ -63,38 +60,48 @@ printMessage("Ready to level up ?")
 webbrowser.open(os.getenv("HABITICA",alt))
 continueDay()
 
-
+"""
 #JS stream
-# printMessage("Hi Mika!")
-# webbrowser.open(os.getenv("JS",alt))
-# continueDay()
+printMessage("Hi Mika!")
+webbrowser.open(os.getenv("JS",alt))
+continueDay()
+"""
 
-# anki
-printMessage("Anki time!")
-webbrowser.open(os.getenv("ANKI",alt))
+# update daily type progess
+printMessage("WPM daily update")
+# subprocess.Popen('C:\\Windows\\System32\\calc.exe')
+webbrowser.open(os.getenv("T_WORKSHEET",alt))
 continueDay()
 
-# read the article
-printMessage("What in DSA today?")
-webbrowser.open(os.getenv("SHEET",alt))
-continueDay()
+#webbrowser.open(os.getenv("C2Ladder",alt))
+#continueDay()
 
-# Striver & Grind 75 & CSES & leetcode
-printMessage("LB Sheet")
-webbrowser.open(os.getenv("LB",alt))
-continueDay()
-printMessage("Grind")
-webbrowser.open(os.getenv("GRIND_75",alt))
-continueDay()
+"""
+	# anki
+	printMessage("Anki time!")
+	webbrowser.open(os.getenv("ANKI",alt))
+	continueDay()
 
-# leetcode
-printMessage("Freq q.'s")
-webbrowser.open(os.getenv("G",alt))
-continueDay()
+	# read the article
+	printMessage("What in DSA today?")
+	webbrowser.open(os.getenv("SHEET",alt))
+	continueDay()
 
-# CP
-printMessage("CSES")
-webbrowser.open(os.getenv("CSES",alt))
-continueDay()
+	# Striver & Grind 75 & CSES & leetcode
+	printMessage("LB Sheet")
+	webbrowser.open(os.getenv("LB",alt))
+	continueDay()
+	printMessage("Grind")
+	webbrowser.open(os.getenv("GRIND_75",alt))
+	continueDay()
 
-printMessage("Let's begin the day, Tawishi :) !")
+	# leetcode
+	printMessage("Freq q.'s")
+	webbrowser.open(os.getenv("G",alt))
+	continueDay()
+
+	# CP
+	printMessage("CSES")
+	webbrowser.open(os.getenv("CSES",alt))
+	continueDay()
+"""

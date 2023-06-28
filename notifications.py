@@ -15,10 +15,10 @@ def sendNotificationOnWindows(title, message, app_image=None):
         app_icon = app_image,
         timeout = 10,
     )
-# def sendNotificationOnWindows(msg="", delay=2):
-#     t = 0
-#     notify = ToastNotifier()
-#     while t < delay:
-#         notify.show_toast("Notification",msg)
-#         time.sleep(1)
-#         t+=1
+def sendNotificationOnWindows(msg="", delay=2):
+    t = 0
+    notify = ToastNotifier()
+    while t < delay:
+        notify.show_toast("Notification",msg)
+        time.sleep(1)
+        t+=1

@@ -1,3 +1,3 @@
 import os
 
-os.system("logActiveWin.sh")
+os.system("bash logActiveWin.sh")

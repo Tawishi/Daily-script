@@ -26,9 +26,9 @@ def typePractice(typingDataset):
     os.system(f"mlt file  --n-lines {numberOfLines} {file}")
 
 
-typingDatasetFolder = "/home/lucassoares/Desktop/projects/self_track/data/typingDataset"
+typingDatasetFolder = "//home/tawishi/Desktop/t./self_track/data/typingDataset"
 typingDataset = pathlib.Path(typingDatasetFolder)
-typingPerformance = "/home/lucassoares/Desktop/projects/self_track/data/typingPerformance.csv"
+typingPerformance = "/home/tawishi/Desktop/t./self_track/data/typingPerformance.csv"
 df = pd.read_csv(typingPerformance)
 typePractice(typingDataset)
 
@@ -66,7 +66,7 @@ if len(sys.argv)>1:
         df["wpm"].plot()
         plt.show()
 
-df.to_csv("/home/lucassoares/Desktop/projects/self_track/data/typingPerformance.csv", index=False)
+df.to_csv("/home/tawishi/Desktop/t./self_track/data/typingPerformance.csv", index=False)
     
 
 

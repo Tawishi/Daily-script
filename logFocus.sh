@@ -1,4 +1,4 @@
-logfile="/home/lucassoares/Desktop/projects/self_track/logs/focus.txt"
+logfile="//home/tawishi/Desktop/t./self_track/logs/focus.txt"
 start="$(date +%s)"
 echo "Started logging focus"
 read stop

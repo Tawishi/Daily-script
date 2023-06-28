@@ -1,3 +1,3 @@
 import os
 
-os.system("logKeyfreq.sh")
+os.system("bash logKeyfreq.sh")

@@ -17,10 +17,13 @@ elif sys.platform in ['linux', 'linux2']:
 active_window_name = ""
 activity_name = ""
 start_time = datetime.datetime.now()
-activeList = AcitivyList([])
+activeList = ActivityList([])
 first_time = True
 DIR = '/home/tawishi/Desktop/t./Daily-script/data/activities_'
 
+"""
+Function definitions
+"""
 
 def url_to_name(url):
     string_list = url.split('/')
@@ -60,6 +63,9 @@ def get_chrome_url():
         print(sys.version)
     return _active_window_name
 
+"""
+Initialize the list
+"""
 try:
     activeList.initialize_me()
 except Exception:
@@ -69,6 +75,7 @@ except Exception:
 try:
     while True:
         previous_site = ""
+        print("sys.platform :",sys.platform)
         if sys.platform not in ['linux', 'linux2']:
             new_window_name = get_active_window()
             if 'Google Chrome' in new_window_name:
